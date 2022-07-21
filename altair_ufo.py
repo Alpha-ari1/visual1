@@ -75,4 +75,4 @@ hists = base.mark_bar().encode(
     height=500
 )
 #background + points | hists
-st.altair_chart((background + points), use_container_width=True)
+st.altair_chart((hist), use_container_width=True)
