@@ -16,7 +16,7 @@ import altair as alt
 import pandas as pd
 import numpy as np
 import streamlit as st
-#from vega_datasets import data
+from vega_datasets import data
 
 df1 = pd.read_csv('https://raw.githubusercontent.com/Alpha-ari1/visual1/main/UFO_scrubbed.csv')
 
@@ -75,4 +75,4 @@ hists = base.mark_bar().encode(
     height=500
 )
 #background + points | hists
-st.altair_chart((hist).interactive(), use_container_width=True)
+st.altair_chart(background + points | hists, use_container_width=True)
