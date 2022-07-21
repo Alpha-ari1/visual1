@@ -44,8 +44,8 @@ background = alt.Chart(countries).mark_geoshape(
 ).project(
     "equirectangular"
 ).properties(
-    width=800,
-    height=500
+    width=600,
+    height=400
 )
 
 base = alt.Chart(df1).properties(
@@ -71,8 +71,8 @@ hists = base.mark_bar().encode(
 ).transform_filter(
     selection
 ).properties(
-    width=800,
-    height=500
+    width=600,
+    height=400
 )
 #background + points | hists
 st.altair_chart(background + points | hists, use_container_width=True)
