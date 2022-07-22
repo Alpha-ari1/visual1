@@ -24,6 +24,10 @@ alt.data_transformers.disable_max_rows()
 
 st.title("UFO Report")
 
+title1 = st.text_input('Este conjunto de datos contiene más de 80.000 informes de avistamientos de ovnis durante el último siglo.')
+title2 = st.text_input('Fuente: https://www.kaggle.com/datasets/NUFORC/ufo-sightings')
+st.write(title1, title2)
+
 url = 'https://raw.githubusercontent.com/vega/datalib/master/test/data/world-110m.json'
 #data.world_110m.url
 countries = alt.topo_feature(url, 'countries')
