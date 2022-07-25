@@ -78,5 +78,5 @@ hists = base.mark_bar().encode(
     width=600,
     height=400
 )
-#background + points | hists
+#background + points | hists 
 st.altair_chart(background + points | hists, use_container_width=True)
