@@ -24,12 +24,6 @@ alt.data_transformers.disable_max_rows()
 
 
 def main_page():
-    st.sidebar.markdown("# UFO Report🎈")
-    st.title("UFO Report")
-    st.sidebar.title("About")
-    st.sidebar.markdown('Este reporte contiene más de 80.000 informes de avistamientos de ovnis durante el último siglo.')
-    st.sidebar.text('Fuente: https://www.kaggle.com/datasets/NUFORC/ufo-sightings')
-
     url = 'https://raw.githubusercontent.com/vega/datalib/master/test/data/world-110m.json'
     #data.world_110m.url
     countries = alt.topo_feature(url, 'countries')
@@ -84,13 +78,13 @@ def main_page():
     st.altair_chart(background + points | hists, use_container_width=True)
 
 def page2():
-    st.markdown("# About page ❄️")
-    st.markdown('## Este reporte contiene más de 80.000 informes de avistamientos de ovnis durante el último siglo.')
+    st.markdown("## About page ❄️")
+    st.markdown('### Este reporte contiene más de 80.000 informes de avistamientos de ovnis durante el último siglo.')
     st.text('Fuente: https://www.kaggle.com/datasets/NUFORC/ufo-sightings')
 
 page_names_to_funcs = {
-    "Main Page": main_page,
-    "Page 2": page2,
+    "Report": main_page,
+    "About": page2,
 }
 
 selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
