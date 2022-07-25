@@ -24,8 +24,9 @@ alt.data_transformers.disable_max_rows()
 
 st.title("UFO Report")
 
-st.text('Este reporte contiene más de 80.000 informes de avistamientos de ovnis durante el último siglo.')
-st.text('Fuente: https://www.kaggle.com/datasets/NUFORC/ufo-sightings')
+
+st.sidebar.text('Este reporte contiene más de 80.000 informes de avistamientos de ovnis durante el último siglo.')
+st.sidebar.text('Fuente: https://www.kaggle.com/datasets/NUFORC/ufo-sightings')
 
 
 url = 'https://raw.githubusercontent.com/vega/datalib/master/test/data/world-110m.json'
