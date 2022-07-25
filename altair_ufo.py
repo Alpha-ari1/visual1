@@ -24,6 +24,7 @@ alt.data_transformers.disable_max_rows()
 
 
 def main_page():
+    st.markdown("## UFO Report 👽")
     url = 'https://raw.githubusercontent.com/vega/datalib/master/test/data/world-110m.json'
     #data.world_110m.url
     countries = alt.topo_feature(url, 'countries')
@@ -78,7 +79,7 @@ def main_page():
     st.altair_chart(background + points | hists, use_container_width=True)
 
 def page2():
-    st.markdown("## About page ❄️")
+    st.markdown("## About page❓")
     st.markdown('### Este reporte contiene más de 80.000 informes de avistamientos de ovnis durante el último siglo.')
     st.text('Fuente: https://www.kaggle.com/datasets/NUFORC/ufo-sightings')
 
